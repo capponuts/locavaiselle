@@ -13,7 +13,6 @@ module.exports = {
           light: '#FF8533',
           dark: '#CC5500',
         },
-        white: '#FFFFFF',
         gray: {
           50: '#F9FAFB',
           100: '#F3F4F6',
@@ -27,6 +26,18 @@ module.exports = {
           900: '#111827',
         },
       },
+      backgroundColor: theme => ({
+        ...theme('colors'),
+      }),
+      textColor: theme => ({
+        ...theme('colors'),
+      }),
+      borderColor: theme => ({
+        ...theme('colors'),
+      }),
+      ringColor: theme => ({
+        ...theme('colors'),
+      }),
     },
   },
   plugins: [
@@ -41,10 +52,17 @@ module.exports = {
     'text-primary-light',
     'bg-primary-dark',
     'text-primary-dark',
-    'text-gray-900',
-    'text-gray-800',
+    'bg-gray-50',
+    'bg-gray-100',
     'bg-gray-200',
-    'bg-gray-300',
+    'bg-gray-800',
+    'bg-gray-900',
+    'text-gray-400',
+    'text-gray-500',
+    'text-gray-600',
+    'text-gray-700',
+    'text-gray-800',
+    'text-gray-900',
     'text-3xl',
     'text-2xl',
     'text-xl',
