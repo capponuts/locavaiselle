@@ -28,13 +28,12 @@
 
 @layer components {
   .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold 
-    hover:bg-primary-dark transition-colors duration-200 
-    inline-flex items-center justify-center;
+    @apply bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition-colors
+    duration-200 flex items-center justify-center font-medium;
   }
   
   .btn-secondary {
@@ -52,13 +51,12 @@
   }
 
   .input-field {
-    @apply w-full px-4 py-2 border border-gray-300 rounded-lg 
-    focus:ring-2 focus:ring-primary focus:border-transparent 
-    transition duration-200;
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm
+    px-4 py-2 border;
   }
 
   .section-padding {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-16 sm:py-24;
   }
 
   .gradient-bg {
@@ -71,6 +69,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
   }
 }
 
