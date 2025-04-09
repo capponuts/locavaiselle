@@ -4,7 +4,11 @@ import "./globals.css";
 import Link from "next/link";
 import MobileMenu from "./components/MobileMenu";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: "Loca Vaisselle - Location de vaisselle en Vendée",
@@ -66,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={inter.variable}>
       <body className={inter.className}>
         <header className="bg-white shadow-sm">
           <nav className="container-custom py-4">

@@ -1,7 +1,7 @@
 'use client';
 
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
   const fadeIn = {
@@ -11,7 +11,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container-custom section-padding">
+    <div className="container-custom section">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -19,80 +19,119 @@ export default function Contact() {
       >
         <motion.h1 
           {...fadeIn}
-          className="text-4xl font-bold text-center mb-8"
+          className="text-center mb-12"
         >
           Contactez-nous
         </motion.h1>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Informations de contact */}
           <motion.div 
-            {...fadeIn}
-            className="space-y-6"
+            {...fadeIn} 
+            className="space-y-8"
           >
-            <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
+            <h2 className="text-2xl font-semibold">Nos coordonnées</h2>
             
-            <div className="flex items-center space-x-4">
-              <Phone className="text-primary w-6 h-6" />
-              <p>01 23 45 67 89</p>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <Mail className="text-primary w-6 h-6" />
-              <p>contact@locavaiselle.fr</p>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <MapPin className="text-primary w-6 h-6" />
-              <p>123 Rue de la Vaisselle, 75000 Paris</p>
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="bg-primary-100 p-3 rounded-full">
+                  <Phone className="text-primary h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium">Téléphone</p>
+                  <p className="text-gray-600">06 09 70 04 50</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="bg-primary-100 p-3 rounded-full">
+                  <Mail className="text-primary h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium">Email</p>
+                  <p className="text-gray-600">contact@locavaiselle.fr</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="bg-primary-100 p-3 rounded-full">
+                  <MapPin className="text-primary h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium">Adresse</p>
+                  <p className="text-gray-600">5 ZA des Terres Neuves</p>
+                  <p className="text-gray-600">85300 Froidfond</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Formulaire */}
-          <motion.form 
+          <motion.div 
             {...fadeIn}
-            className="space-y-6"
-            onSubmit={(e) => e.preventDefault()}
+            className="card p-6"
           >
-            <div className="form-group">
-              <label className="form-label" htmlFor="name">Nom</label>
-              <input
-                type="text"
-                id="name"
-                className="input-field"
-                placeholder="Votre nom"
-              />
-            </div>
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="form-group">
+                <label htmlFor="name" className="form-label">
+                  Nom complet
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="input-field"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
 
-            <div className="form-group">
-              <label className="form-label" htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                className="input-field"
-                placeholder="votre@email.com"
-              />
-            </div>
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="input-field"
+                  placeholder="votre@email.com"
+                  required
+                />
+              </div>
 
-            <div className="form-group">
-              <label className="form-label" htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                rows={4}
-                className="input-field"
-                placeholder="Votre message"
-              ></textarea>
-            </div>
+              <div className="form-group">
+                <label htmlFor="phone" className="form-label">
+                  Téléphone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  className="input-field"
+                  placeholder="Votre numéro de téléphone"
+                  required
+                />
+              </div>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="btn-primary w-full flex items-center justify-center"
-            >
-              <Send className="w-5 h-5 mr-2" />
-              Envoyer
-            </motion.button>
-          </motion.form>
+              <div className="form-group">
+                <label htmlFor="message" className="form-label">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  className="input-field"
+                  placeholder="Votre message"
+                  required
+                />
+              </div>
+
+              <motion.button
+                type="submit"
+                className="btn-primary w-full"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Envoyer le message
+              </motion.button>
+            </form>
+          </motion.div>
         </div>
       </motion.div>
     </div>

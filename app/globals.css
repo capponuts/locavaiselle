@@ -4,174 +4,75 @@
 
 @layer base {
   :root {
-    --primary: #FF6B00;
-    --primary-light: #FF8533;
-    --primary-dark: #CC5500;
+    --font-inter: 'Inter', sans-serif;
   }
 
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-gray-900 antialiased;
   }
 
   h1 {
-    @apply text-4xl font-bold mb-8;
+    @apply text-4xl font-bold tracking-tight;
   }
 
   h2 {
-    @apply text-3xl font-semibold mb-6;
+    @apply text-3xl font-semibold tracking-tight;
   }
 
   h3 {
-    @apply text-2xl font-semibold mb-4;
+    @apply text-2xl font-semibold;
   }
 }
 
 @layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none 
+    disabled:opacity-50 h-10 px-4 py-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-600 focus-visible:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-gray-900 border border-gray-200 hover:bg-gray-100 focus-visible:ring-gray-500;
+  }
+
+  .input-field {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500
+    sm:text-sm disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-group {
+    @apply space-y-1;
+  }
+
   .container-custom {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition-colors
-    duration-200 flex items-center justify-center font-medium;
-  }
-  
-  .btn-secondary {
-    @apply bg-white text-primary px-6 py-3 rounded-lg font-semibold 
-    border-2 border-primary hover:bg-primary hover:text-white 
-    transition-colors duration-200 inline-flex items-center justify-center;
-  }
-
-  .nav-link {
-    @apply text-gray-600 hover:text-primary transition-colors duration-200;
+  .section {
+    @apply py-12 sm:py-16 lg:py-20;
   }
 
   .card {
-    @apply bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-200;
+    @apply rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md;
   }
 
-  .input-field {
-    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm
-    px-4 py-2 border;
+  .nav-link {
+    @apply text-gray-600 hover:text-primary-500 transition-colors;
   }
 
-  .section-padding {
-    @apply py-16 sm:py-24;
+  .logo {
+    @apply h-12 px-6 bg-primary flex items-center justify-center text-white font-bold text-xl rounded-md;
   }
 
-  .gradient-bg {
-    @apply bg-gradient-to-r from-primary to-primary-dark text-white;
-  }
-
-  .hero-section {
-    @apply relative min-h-[600px] flex items-center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .form-group {
-    @apply space-y-2;
-  }
-
-  .form-label {
-    @apply block text-sm font-medium text-gray-700;
-  }
-}
-
-/* Styles spécifiques pour la navigation */
-.mobile-menu {
-  @apply fixed inset-0 bg-black bg-opacity-50 z-50;
-}
-
-.mobile-menu-content {
-  @apply fixed right-0 top-0 h-full w-64 bg-white shadow-xl p-4;
-}
-
-/* Styles pour le menu burger */
-.menu-button {
-  @apply block md:hidden p-2 rounded-lg hover:bg-gray-100;
-}
-
-/* Styles pour le logo */
-.logo {
-  @apply h-12 w-48 bg-primary flex items-center justify-center text-white font-bold text-xl;
-}
-
-/* Styles pour les sections de services */
-.service-card {
-  @apply bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-200
-  hover:transform hover:-translate-y-1;
-}
-
-.service-icon {
-  @apply w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4;
-}
-
-.service-icon-inner {
-  @apply w-6 h-6 text-white;
-}
-
-/* Styles pour les prix */
-.price-tag {
-  @apply text-3xl font-bold text-primary mb-4;
-}
-
-/* Animations */
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
-}
-
-.slide-up {
-  animation: slideUp 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Contact form styles */
-.form-group {
-  @apply mb-6;
-}
-
-.form-label {
-  @apply block text-sm font-medium text-gray-700 mb-1;
-}
-
-/* Footer styles */
-.footer-link {
-  @apply text-gray-400 hover:text-white transition-colors duration-200;
-}
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .container-custom {
-    @apply px-4;
-  }
-  
-  h1 {
-    @apply text-3xl;
-  }
-  
-  h2 {
-    @apply text-2xl;
-  }
-  
-  h3 {
-    @apply text-xl;
+  .footer-link {
+    @apply text-gray-400 hover:text-white transition-colors;
   }
 }
