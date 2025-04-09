@@ -32,4 +32,14 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
   ],
+  safelist: [
+    'bg-white',
+    'text-white',
+    'bg-primary',
+    'text-primary',
+    'bg-primary-light',
+    'text-primary-light',
+    'bg-primary-dark',
+    'text-primary-dark',
+  ],
 } 
