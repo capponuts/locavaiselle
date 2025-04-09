@@ -32,13 +32,13 @@ export default function RootLayout({
                 />
               </Link>
               <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-[#FF6B00] transition-colors">
+                <Link href="/" className="text-gray-700 hover:text-primary transition-colors">
                   Accueil
                 </Link>
-                <Link href="/catalogue" className="text-gray-700 hover:text-[#FF6B00] transition-colors">
+                <Link href="/catalogue" className="text-gray-700 hover:text-primary transition-colors">
                   Catalogue et Tarifs
                 </Link>
-                <Link href="/devis" className="text-gray-700 hover:text-[#FF6B00] transition-colors">
+                <Link href="/devis" className="text-gray-700 hover:text-primary transition-colors">
                   Demande de Devis
                 </Link>
                 <Link href="/contact" className="btn-primary">
