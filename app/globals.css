@@ -29,7 +29,7 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary text-white hover:bg-primary-600;
+    @apply btn bg-primary text-white hover:bg-primary-600 focus:ring-primary;
   }
 
   .btn-secondary {
@@ -70,5 +70,21 @@
 
   .footer-link {
     @apply text-gray-400 hover:text-white transition-colors duration-200;
+  }
+
+  .hero-section {
+    @apply relative bg-gradient-to-r from-primary-600 to-primary-800 py-20 md:py-32;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800;
+  }
+
+  .service-card {
+    @apply bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-sm;
   }
 }

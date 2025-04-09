@@ -1,8 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import Image from "next/image";
-import { ShoppingCart, Home as HomeIcon, Palette, CheckCircle, Clock, Phone } from "lucide-react";
+import { ShoppingCart, Home as HomeIcon, Star, CheckCircle, Clock, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -83,7 +82,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                <Palette className="w-6 h-6 text-white" />
+                <Star className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Location de Décoration</h3>
               <p className="text-gray-600">Accessoires et éléments décoratifs pour personnaliser votre événement.</p>

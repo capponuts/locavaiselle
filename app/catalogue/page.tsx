@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import { Check } from "lucide-react";
 
 export default function Catalogue() {
   return (
@@ -24,45 +25,31 @@ export default function Catalogue() {
               <h3 className="text-xl font-semibold mb-4">Pack Elégance Ø 1</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Assiette Ronde 27 cm
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Assiette Ronde 24 cm
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Assiette Ronde 21 cm
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Verre Vin 19 cl
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Verre Eau 24 cl
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Verre Flûte 17 cl
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Couverts complets
                 </li>
               </ul>
@@ -76,39 +63,27 @@ export default function Catalogue() {
               <h3 className="text-xl font-semibold mb-4">Pack Elégance Ø 2</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Assiette Ronde 27 cm
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Assiette Ronde 24 cm
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Verre Vin 19 cl
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Verre Eau 24 cl
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Verre Flûte 17 cl
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Couverts complets
                 </li>
               </ul>
@@ -122,21 +97,15 @@ export default function Catalogue() {
               <h3 className="text-xl font-semibold mb-4">Pack Elégance Ø 3</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Assiette Ronde 27 cm
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Verre Vin 19 cl
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-primary mr-2" />
                   Couverts complets
                 </li>
               </ul>

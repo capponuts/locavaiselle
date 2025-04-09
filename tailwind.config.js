@@ -25,6 +25,9 @@ module.exports = {
         'gray-light': '#F3F4F6',
         'gray-dark': '#1F2937',
       },
+      ringColor: {
+        primary: '#FF6B00',
+      },
       typography: {
         DEFAULT: {
           css: {
@@ -63,10 +66,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms')({
-      strategy: 'class',
-    }),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
   ],
   future: {
     hoverOnlyWhenSupported: true,
