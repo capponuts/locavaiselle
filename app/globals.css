@@ -32,14 +32,34 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition-colors;
+    background-color: #FF6B00;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #CC5500;
   }
 
   .btn-secondary {
-    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition-colors;
+    background-color: #E5E7EB;
+    color: #1F2937;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #D1D5DB;
   }
 
   .container-custom {
-    @apply container mx-auto px-4 py-8 max-w-4xl;
+    width: 100%;
+    max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 1rem;
   }
 }
