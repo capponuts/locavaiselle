@@ -7,17 +7,9 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div>
+    <div className="fade-in">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center">
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="Vaisselle de luxe"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-800/80" />
+      <section className="hero-section">
         <div className="container-custom relative z-10 text-white">
           <motion.h1 
             className="text-5xl md:text-6xl font-bold mb-6"
@@ -53,12 +45,12 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <h2 className="text-center mb-12">Nos Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="service-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -71,7 +63,7 @@ export default function Home() {
               <p className="text-gray-600">Assiettes, verres, couverts et accessoires de table pour tous vos événements.</p>
             </motion.div>
             <motion.div 
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="service-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -84,7 +76,7 @@ export default function Home() {
               <p className="text-gray-600">Tables, chaises et décoration pour créer l'ambiance parfaite.</p>
             </motion.div>
             <motion.div 
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="service-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -101,12 +93,12 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20">
+      <section className="section-padding">
         <div className="container-custom">
           <h2 className="text-center mb-12">Pourquoi nous choisir ?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div 
-              className="text-center"
+              className="card text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
@@ -119,7 +111,7 @@ export default function Home() {
               <p className="text-gray-600">À partir de 1€ par personne</p>
             </motion.div>
             <motion.div 
-              className="text-center"
+              className="card text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -132,7 +124,7 @@ export default function Home() {
               <p className="text-gray-600">Matériel haut de gamme</p>
             </motion.div>
             <motion.div 
-              className="text-center"
+              className="card text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -145,7 +137,7 @@ export default function Home() {
               <p className="text-gray-600">Sur toute la Vendée</p>
             </motion.div>
             <motion.div 
-              className="text-center"
+              className="card text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -162,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="gradient-bg section-padding">
         <div className="container-custom text-center">
           <motion.h2 
             className="text-4xl font-bold mb-6"
@@ -188,7 +180,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Link href="/devis" className="btn-secondary bg-white text-primary hover:bg-gray-100">
+            <Link href="/devis" className="btn-secondary">
               Demander un devis gratuit
             </Link>
           </motion.div>

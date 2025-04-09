@@ -4,62 +4,151 @@
 
 @layer base {
   body {
-    background-color: #FFFFFF;
+    @apply bg-gray-50;
     color: #111827;
   }
 
   h1 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
+    @apply text-4xl font-bold mb-8;
   }
 
   h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    @apply text-3xl font-semibold mb-6;
   }
 
   h3 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
+    @apply text-2xl font-semibold mb-4;
   }
 }
 
 @layer components {
-  .btn-primary {
-    background-color: #FF6B00;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #CC5500;
-  }
-
-  .btn-secondary {
-    background-color: #E5E7EB;
-    color: #1F2937;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #D1D5DB;
-  }
-
   .container-custom {
-    width: 100%;
-    max-width: 56rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem 1rem;
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold 
+    hover:bg-primary-dark transition-colors duration-200 
+    inline-flex items-center justify-center;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-primary px-6 py-3 rounded-lg font-semibold 
+    border-2 border-primary hover:bg-primary hover:text-white 
+    transition-colors duration-200 inline-flex items-center justify-center;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-primary transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg 
+    focus:ring-2 focus:ring-primary focus:border-transparent 
+    transition duration-200;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-white;
+  }
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  @apply fixed inset-0 bg-gray-900 bg-opacity-50 z-50 
+  transform transition-transform duration-300 ease-in-out;
+}
+
+.mobile-menu-content {
+  @apply fixed right-0 top-0 h-full w-64 bg-white shadow-xl 
+  transform transition-transform duration-300 ease-in-out;
+}
+
+/* Hero section specific styles */
+.hero-section {
+  @apply relative min-h-[600px] flex items-center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Services section styles */
+.service-card {
+  @apply card hover:transform hover:-translate-y-1 transition-all duration-200;
+}
+
+/* Pricing section styles */
+.price-tag {
+  @apply text-3xl font-bold text-primary mb-4;
+}
+
+/* Contact form styles */
+.form-group {
+  @apply mb-6;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+/* Footer styles */
+.footer-link {
+  @apply text-gray-400 hover:text-white transition-colors duration-200;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container-custom {
+    @apply px-4;
+  }
+  
+  h1 {
+    @apply text-3xl;
+  }
+  
+  h2 {
+    @apply text-2xl;
+  }
+  
+  h3 {
+    @apply text-xl;
   }
 }
