@@ -12,56 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Loca Vaisselle - Location de vaisselle en Vendée",
-  description: "Location de vaisselle, mobilier et décoration pour vos événements en Vendée et Loire-Atlantique. Service professionnel, prix attractifs à partir de 1€ par personne.",
-  keywords: "location vaisselle, location mobilier, événement, mariage, anniversaire, Vendée, Loire-Atlantique",
-  authors: [{ name: "Loca Vaisselle" }],
-  creator: "Loca Vaisselle",
-  publisher: "Loca Vaisselle",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://locavaisselle.fr'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Loca Vaisselle - Location de vaisselle en Vendée',
-    description: 'Location de vaisselle, mobilier et décoration pour vos événements en Vendée et Loire-Atlantique',
-    url: 'https://locavaisselle.fr',
-    siteName: 'Loca Vaisselle',
-    images: [
-      {
-        url: '/images/hero-bg.jpg',
-        width: 1920,
-        height: 1080,
-        alt: 'Vaisselle de luxe pour événements',
-      },
-    ],
-    locale: 'fr_FR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Loca Vaisselle - Location de vaisselle en Vendée',
-    description: 'Location de vaisselle, mobilier et décoration pour vos événements',
-    images: ['/images/hero-bg.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'votre-code-de-verification',
-  },
+  description: "Location de vaisselle, mobilier et décoration pour vos événements en Vendée. Service professionnel et prix attractifs.",
+  keywords: ["location vaisselle", "location mobilier", "événement", "mariage", "Vendée"],
 };
 
 export default function RootLayout({
@@ -72,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="fr" className={inter.variable}>
       <body className={inter.className}>
-        <header className="bg-white shadow-sm">
-          <nav className="container-custom py-4">
+        <header className="bg-white border-b border-gray-200">
+          <div className="container-custom py-4">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center">
                 <div className="logo">
@@ -96,7 +48,7 @@ export default function RootLayout({
               </div>
               <MobileMenu />
             </div>
-          </nav>
+          </div>
         </header>
 
         <main>{children}</main>
