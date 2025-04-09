@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary: #FF6B00;
+    --primary-light: #FF8533;
+    --primary-dark: #CC5500;
+  }
+
   body {
-    @apply bg-gray-50;
-    color: #111827;
+    @apply bg-white text-gray-900;
   }
 
   h1 {
@@ -59,6 +64,52 @@
   .gradient-bg {
     @apply bg-gradient-to-r from-primary to-primary-dark text-white;
   }
+
+  .hero-section {
+    @apply relative min-h-[600px] flex items-center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Styles spécifiques pour la navigation */
+.mobile-menu {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-50;
+}
+
+.mobile-menu-content {
+  @apply fixed right-0 top-0 h-full w-64 bg-white shadow-xl p-4;
+}
+
+/* Styles pour le menu burger */
+.menu-button {
+  @apply block md:hidden p-2 rounded-lg hover:bg-gray-100;
+}
+
+/* Styles pour le logo */
+.logo {
+  @apply h-12 w-48 bg-primary flex items-center justify-center text-white font-bold text-xl;
+}
+
+/* Styles pour les sections de services */
+.service-card {
+  @apply bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-200
+  hover:transform hover:-translate-y-1;
+}
+
+.service-icon {
+  @apply w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4;
+}
+
+.service-icon-inner {
+  @apply w-6 h-6 text-white;
+}
+
+/* Styles pour les prix */
+.price-tag {
+  @apply text-3xl font-bold text-primary mb-4;
 }
 
 /* Animations */
@@ -71,12 +122,8 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -88,36 +135,6 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-/* Mobile menu styles */
-.mobile-menu {
-  @apply fixed inset-0 bg-gray-900 bg-opacity-50 z-50 
-  transform transition-transform duration-300 ease-in-out;
-}
-
-.mobile-menu-content {
-  @apply fixed right-0 top-0 h-full w-64 bg-white shadow-xl 
-  transform transition-transform duration-300 ease-in-out;
-}
-
-/* Hero section specific styles */
-.hero-section {
-  @apply relative min-h-[600px] flex items-center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Services section styles */
-.service-card {
-  @apply card hover:transform hover:-translate-y-1 transition-all duration-200;
-}
-
-/* Pricing section styles */
-.price-tag {
-  @apply text-3xl font-bold text-primary mb-4;
 }
 
 /* Contact form styles */

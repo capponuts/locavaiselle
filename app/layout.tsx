@@ -72,18 +72,18 @@ export default function RootLayout({
           <nav className="container-custom py-4">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center">
-                <div className="h-12 w-48 bg-primary flex items-center justify-center text-white font-bold text-xl">
+                <div className="logo">
                   Loca Vaisselle
                 </div>
               </Link>
               <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-primary transition-colors">
+                <Link href="/" className="nav-link">
                   Accueil
                 </Link>
-                <Link href="/catalogue" className="text-gray-700 hover:text-primary transition-colors">
+                <Link href="/catalogue" className="nav-link">
                   Catalogue et Tarifs
                 </Link>
-                <Link href="/devis" className="text-gray-700 hover:text-primary transition-colors">
+                <Link href="/devis" className="nav-link">
                   Demande de Devis
                 </Link>
                 <Link href="/contact" className="btn-primary">
@@ -103,7 +103,7 @@ export default function RootLayout({
               <div>
                 <h3 className="text-xl font-bold mb-4">Loca Vaisselle</h3>
                 <p className="text-gray-400">
-                  Location de vaisselle, mobilier et décoration pour vos événements en Vendée et Loire-Atlantique
+                  Location de vaisselle et mobilier pour vos événements
                 </p>
               </div>
               <div>
@@ -121,12 +121,12 @@ export default function RootLayout({
                 <h3 className="text-xl font-bold mb-4">Liens utiles</h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/mentions-legales" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/mentions-legales" className="footer-link">
                       Mentions légales
                     </Link>
                   </li>
                   <li>
-                    <Link href="/conditions-generales" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/conditions-generales" className="footer-link">
                       Conditions générales
                     </Link>
                   </li>
