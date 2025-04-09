@@ -4,7 +4,8 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900;
+    background-color: #FFFFFF;
+    @apply text-gray-900;
   }
 
   h1 {
