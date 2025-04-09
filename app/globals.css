@@ -5,19 +5,28 @@
 @layer base {
   body {
     background-color: #FFFFFF;
-    @apply text-gray-900;
+    color: #111827;
   }
 
   h1 {
-    @apply text-3xl font-bold mb-8;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
   }
 
   h2 {
-    @apply text-2xl font-semibold mb-4;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
   }
 
   h3 {
-    @apply text-xl font-semibold mb-3;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
   }
 }
 
