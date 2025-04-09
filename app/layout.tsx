@@ -2,13 +2,62 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import Image from "next/image";
+import MobileMenu from "./components/MobileMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Loca Vaisselle - Location de vaisselle en Vendée",
-  description: "Location de vaisselle, mobilier et décoration pour vos événements en Vendée et Loire-Atlantique",
+  description: "Location de vaisselle, mobilier et décoration pour vos événements en Vendée et Loire-Atlantique. Service professionnel, prix attractifs à partir de 1€ par personne.",
+  keywords: "location vaisselle, location mobilier, événement, mariage, anniversaire, Vendée, Loire-Atlantique",
+  authors: [{ name: "Loca Vaisselle" }],
+  creator: "Loca Vaisselle",
+  publisher: "Loca Vaisselle",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://locavaisselle.fr'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Loca Vaisselle - Location de vaisselle en Vendée',
+    description: 'Location de vaisselle, mobilier et décoration pour vos événements en Vendée et Loire-Atlantique',
+    url: 'https://locavaisselle.fr',
+    siteName: 'Loca Vaisselle',
+    images: [
+      {
+        url: '/images/hero-bg.jpg',
+        width: 1920,
+        height: 1080,
+        alt: 'Vaisselle de luxe pour événements',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Loca Vaisselle - Location de vaisselle en Vendée',
+    description: 'Location de vaisselle, mobilier et décoration pour vos événements',
+    images: ['/images/hero-bg.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'votre-code-de-verification',
+  },
 };
 
 export default function RootLayout({
@@ -23,13 +72,9 @@ export default function RootLayout({
           <nav className="container-custom py-4">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center">
-                <Image
-                  src="/logo.jpg"
-                  alt="Loca Vaisselle Logo"
-                  width={200}
-                  height={60}
-                  className="h-12 w-auto"
-                />
+                <div className="h-12 w-48 bg-primary flex items-center justify-center text-white font-bold text-xl">
+                  Loca Vaisselle
+                </div>
               </Link>
               <div className="hidden md:flex items-center space-x-8">
                 <Link href="/" className="text-gray-700 hover:text-primary transition-colors">
@@ -45,11 +90,7 @@ export default function RootLayout({
                   Nous Contacter
                 </Link>
               </div>
-              <button className="md:hidden">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+              <MobileMenu />
             </div>
           </nav>
         </header>
