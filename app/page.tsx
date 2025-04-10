@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingCart, Home as HomeIcon, Star, CheckCircle, Clock, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -9,29 +10,44 @@ export default function Home() {
     <div className="fade-in">
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="container-custom relative z-10 text-white">
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
+        <div className="container-custom relative z-10 text-white py-16">
+          <motion.div
+            className="flex flex-col items-center mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Location de Vaisselle<br />
-            <span className="text-primary">pour vos événements</span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl mb-8 max-w-2xl"
+            <Image
+              src="/logo-loca-vaisselle.png"
+              alt="Logo LocaVaiselle"
+              width={300}
+              height={120}
+              priority
+              className="h-32 w-auto mb-8"
+            />
+          </motion.div>
+          <motion.h1 
+            className="text-5xl md:text-6xl font-bold mb-6 text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Faites la fête sans vous soucier de la vaisselle ! Location de vaisselle, mobilier et décoration pour tous vos événements en Vendée et Loire-Atlantique.
-          </motion.p>
-          <motion.div 
-            className="flex gap-4"
+            Location de Vaisselle<br />
+            <span className="text-4xl md:text-5xl opacity-80">pour vos événements</span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl mb-8 max-w-2xl mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            Faites la fête sans vous soucier de la vaisselle ! Location de vaisselle, mobilier et décoration pour tous vos événements en Vendée et Loire-Atlantique.
+          </motion.p>
+          <motion.div 
+            className="flex gap-4 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <Link href="/catalogue" className="btn-primary">
               Voir notre catalogue
