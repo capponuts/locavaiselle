@@ -11,15 +11,15 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
-      <div className="container-custom py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
+      <div className="container-custom py-2 flex justify-between items-center">
+        <Link href="/" className="flex items-center py-2">
           <Image
             src="/logo-loca-vaisselle.png"
             alt="Logo LocaVaiselle"
-            width={180}
-            height={60}
+            width={200}
+            height={80}
             priority
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 
