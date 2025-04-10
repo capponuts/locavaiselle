@@ -18,24 +18,24 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden fixed top-16 left-0 right-0 bg-white shadow-lg"
+          className="md:hidden fixed top-[3.5rem] left-0 right-0 bg-white shadow-lg"
         >
           <nav className="container-custom py-6">
             <div className="flex justify-center mb-6">
               <Image
                 src="/logo-loca-vaisselle.png"
                 alt="Logo LocaVaiselle"
-                width={240}
-                height={100}
+                width={200}
+                height={67}
                 priority
-                className="h-20 w-auto"
+                className="h-16 w-auto object-contain"
               />
             </div>
             <ul className="flex flex-col space-y-4">
               <li>
                 <Link
                   href="/"
-                  className="block text-gray-700 hover:text-primary transition-colors text-lg py-2"
+                  className="block text-gray-700 hover:text-primary transition-colors text-base font-medium py-2"
                   onClick={onClose}
                 >
                   Accueil
@@ -44,7 +44,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <li>
                 <Link
                   href="/catalogue"
-                  className="block text-gray-700 hover:text-primary transition-colors text-lg py-2"
+                  className="block text-gray-700 hover:text-primary transition-colors text-base font-medium py-2"
                   onClick={onClose}
                 >
                   Catalogue
@@ -53,7 +53,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <li>
                 <Link
                   href="/devis"
-                  className="block text-gray-700 hover:text-primary transition-colors text-lg py-2"
+                  className="block text-gray-700 hover:text-primary transition-colors text-base font-medium py-2"
                   onClick={onClose}
                 >
                   Devis
@@ -62,7 +62,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <li>
                 <Link
                   href="/contact"
-                  className="block text-gray-700 hover:text-primary transition-colors text-lg py-2"
+                  className="block text-gray-700 hover:text-primary transition-colors text-base font-medium py-2"
                   onClick={onClose}
                 >
                   Contact

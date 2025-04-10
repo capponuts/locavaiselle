@@ -10,16 +10,16 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/90 backdrop-blur-sm shadow-sm fixed top-0 left-0 right-0 z-50">
+    <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="container-custom py-2 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo-loca-vaisselle.png"
             alt="Logo LocaVaiselle"
-            width={120}
-            height={40}
+            width={150}
+            height={50}
             priority
-            className="h-8 w-auto"
+            className="h-10 w-auto object-contain"
           />
         </Link>
 
@@ -29,7 +29,7 @@ export default function Header() {
             <li>
               <Link
                 href="/"
-                className="text-sm text-gray-700 hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Accueil
               </Link>
@@ -37,7 +37,7 @@ export default function Header() {
             <li>
               <Link
                 href="/catalogue"
-                className="text-sm text-gray-700 hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Catalogue
               </Link>
@@ -45,7 +45,7 @@ export default function Header() {
             <li>
               <Link
                 href="/devis"
-                className="text-sm text-gray-700 hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Devis
               </Link>
@@ -53,7 +53,7 @@ export default function Header() {
             <li>
               <Link
                 href="/contact"
-                className="text-sm text-gray-700 hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
               >
                 Contact
               </Link>
