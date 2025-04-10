@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
@@ -11,8 +12,15 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="container-custom py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-primary">
-          LocaVaiselle
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-loca-vaisselle.png"
+            alt="Logo LocaVaiselle"
+            width={180}
+            height={60}
+            priority
+            className="h-12 w-auto"
+          />
         </Link>
 
         {/* Navigation desktop */}
